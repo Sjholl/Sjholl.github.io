@@ -1,0 +1,56 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --link: #0077cc;
+  --border: #ddd;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --link: #66aaff;
+  --border: #333;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+  max-width: 800px;
+  margin: auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-links {
+  list-style: none;
+  padding: 0;
+}
+
+.project-links li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+button#darkModeToggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text);
+}
