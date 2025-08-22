@@ -7,6 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentPage = 1;
 
+  function formatDates() {
+    const dateElements = document.querySelectorAll(".date");
+    dateElements.forEach(el => {
+      const raw = el.textContent.trim();
+      const parsed = new Date(raw);
+
+      if (!isNaN(parsed)) {
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        el.textContent = parsed.toLocaleDateString(undefined, options);
+      }
+    });
+  }
+
   function renderPage(page) {
     currentPage = page;
     posts.forEach((post, i) => {
