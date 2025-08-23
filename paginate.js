@@ -1,7 +1,7 @@
 // paginate.js
 document.addEventListener("DOMContentLoaded", () => {
   const posts = [...document.querySelectorAll(".post")];
-  const perPage = 3;
+  const perPage = 10;
   const totalPages = Math.ceil(posts.length / perPage);
   const controls = document.getElementById("paginationControls");
 
